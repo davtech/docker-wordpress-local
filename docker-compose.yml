@@ -3,15 +3,15 @@ version: '2'
 services:
 
   wordpress:
-    build: .
+    image: wordpress
     ports:
       - 8080:80
     volumes:
       - ./www:/var/www/html
     environment:
-      WORDPRESS_DB_PASSWORD: exemplo
+      WORDPRESS_DB_PASSWORD: root
 
   db:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: exemplo
+      MYSQL_ROOT_PASSWORD: root
